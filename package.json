@@ -1,0 +1,20 @@
+{
+  "name": "rest-service-app-native-js",
+  "version": "1.0.0",
+  "description": "This is rest API service using native js",
+  "main": "app.js",
+  "scripts": {
+    "start": "app.js",
+    "test": "make testst"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramaiah-k/REST-CRUD-without-plugin-module.git"
+  },
+  "author": "Ramaiah K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramaiah-k/REST-CRUD-without-plugin-module/issues"
+  },
+  "homepage": "https://github.com/ramaiah-k/REST-CRUD-without-plugin-module#readme"
+}

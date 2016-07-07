@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crud OPeration using Template tag and Ajax</title>
+	<style type="text/css">
+		.container {
+			width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.list-user {
+
+		}
+		.row {
+			border:1px solid black;
+		}
+		.cell {
+			display: inline-block;
+			padding: 10px;
+		}
+
+		body {
+			position: relative;
+		}
+		.model-bg {
+			display: none;
+			background-color: black;
+			opacity: 0.5;
+			width: 100%;
+			height: 100vh;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.model {
+			display: none;
+			width: 350px;
+			min-height: 100px;
+			position: relative;
+			top: 50%;
+			left: calc(50% - 250px);
+			padding: 30px;
+			background: #FFF;
+		}
+		.model .close-btn {
+
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			color: red;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+
+	<div class="list-user">
+
+	</div>
+	<button id="add-more-user" class="">Add more User</button>
+</div>
+
+<div class="model-bg"></div>
+<div class="model">
+	<div class="close-btn">X</div>
+	<div class="model-inner">
+
+	</div>
+</div>
+
+<!-- Create the Data To the server -->
+<template id="add-user">
+	<div class="form-container">
+		<h1>Add Student</h1>
+		<form>
+			Student Name: <input type="text" class="control-fields" name="sname"><br>
+			Student Age : <input type="text" class="control-fields" name="sage"><br>
+			Mark1 : <input type="text" class="control-fields" name="smark1"><br>
+			Mark2 : <input type="text" class="control-fields" name="smark2"><br>
+			Mark3 : <input type="text" class="control-fields" name="smark3"><br>
+			<button class="btn-submit">Submit</button>
+			<button class="btn-cancel">Cancel</button>
+			<!-- <input type="submit" name="sub"> -->
+
+		</form>
+	</div>
+
+</template>
+
+<!-- Read the data From the Server -->
+<template id="list-user" >
+	<div class="row">
+		<div class="cell sname"></div>
+		<div class="cell sage"></div>
+		<div class="cell mark1"></div>
+		<div class="cell mark2"></div>
+		<div class="cell mark3"></div>
+		<div class="cell actions">
+			<button class="edit">Edit</button>
+			<button class="delete">Delete</button>
+		</div>
+	</div>
+</template>
+
+<!-- Update the User data -->
+<template id="update-user">
+	<form>
+		Student Name: <input type="text" class="control-fields" name="sname"><br>
+		Student Age : <input type="text" class="control-fields" name="sage"><br>
+		Mark1 : <input type="text" class="control-fields" name="smark1"><br>
+		Mark2 : <input type="text" class="control-fields" name="smark2"><br>
+		Mark3 : <input type="text" class="control-fields" name="smark3"><br>
+		<button class="btn-submit">Submit</button>
+		<button class="btn-cancel">Cancel</button>
+		<!-- <input type="submit" name="sub"> -->
+	</form>
+</template>
+
+<!-- Delete the user Data -->
+<template id="delete-user">
+	Delete Student Record
+</template>
+
+<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
